@@ -43,7 +43,8 @@ module.exports = function(eleventyConfig) {
 
   // 静的ファイルのパススルー設定
   eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy({ "src/images": "images" }); // 画像もパススルー
+  eleventyConfig.addPassthroughCopy({ "src/images": "images" });
+　eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
 
   // firstImage フィルター
   eleventyConfig.addFilter("firstImage", function(content) {
