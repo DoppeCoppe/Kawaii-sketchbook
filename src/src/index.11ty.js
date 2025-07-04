@@ -1,4 +1,4 @@
-const pathPrefix = ""; // 本番環境向けの prefix
+const pathPrefix = "/"; // 本番環境向けの prefix
 
 module.exports = class {
   data() {
