@@ -1,8 +1,6 @@
 const markdownIt = require("markdown-it");
 const { DateTime } = require("luxon");
 
-// pathPrefixをここで定義（全体で共通利用）
-const pathPrefix = "/";
 
 module.exports = function(eleventyConfig) {
 
@@ -34,7 +32,6 @@ module.exports = function(eleventyConfig) {
     breaks: true
   }).use(imagePrefixPlugin));
   
- eleventyConfig.addGlobalData("pathPrefix", pathPrefix);
 
   // 静的ファイルのパススルー設定
   eleventyConfig.addPassthroughCopy("css");
@@ -73,7 +70,6 @@ module.exports = function(eleventyConfig) {
 
   // pathPrefixとディレクトリ構成を指定して返す
   return {
-    pathPrefix: pathPrefix,
     dir: {
       input: "src",
       output: "_site",
