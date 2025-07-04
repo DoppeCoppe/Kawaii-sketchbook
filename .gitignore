@@ -1,0 +1,13 @@
+# ビルド生成物
+_site/
+_templates/
+
+# Node.js関連
+node_modules/
+
+# OS・エディタによる自動生成ファイル
+.DS_Store
+Thumbs.db
+
+# VSCodeなどの個人環境設定
+.vscode/
