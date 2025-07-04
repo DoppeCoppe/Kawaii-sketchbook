@@ -2,7 +2,7 @@ const markdownIt = require("markdown-it");
 const { DateTime } = require("luxon");
 
 // pathPrefixをここで定義（全体で共通利用）
-const pathPrefix = "/kawaii-sketchbook/";
+const pathPrefix = "/";
 
 module.exports = function(eleventyConfig) {
 
@@ -16,22 +16,17 @@ module.exports = function(eleventyConfig) {
 
   // markdown-it に画像URLを pathPrefix付きに変換するプラグインを作成
   const imagePrefixPlugin = (md) => {
-    const defaultRender = md.renderer.rules.image || function(tokens, idx, options, env, self) {
-      return self.renderToken(tokens, idx, options);
-    };
-
-    md.renderer.rules.image = function(tokens, idx, options, env, self) {
-      const token = tokens[idx];
-      const srcIndex = token.attrIndex('src');
-      if (srcIndex >= 0) {
-        const src = token.attrs[srcIndex][1];
-        if (src.startsWith('/')) {
-          token.attrs[srcIndex][1] = pathPrefix + src.slice(1); // スラッシュ二重付け防止
-        }
-      }
-      return defaultRender(tokens, idx, options, env, self);
-    };
+  const defaultRender = md.renderer.rules.image || function(tokens, idx, options, env, self) {
+    return self.renderToken(tokens, idx, options);
   };
+
+  md.renderer.rules.image = function(tokens, idx, options, env, self) {
+    const token = tokens[idx];
+    // 特に処理しない、つまりそのまま通す
+    return defaultRender(tokens, idx, options, env, self);
+  };
+};
+
 
   // Markdown-itの設定（HTMLタグ許可、改行を<br>に変換）、プラグイン追加
   eleventyConfig.setLibrary("md", markdownIt({ 
@@ -81,7 +76,7 @@ module.exports = function(eleventyConfig) {
     pathPrefix: pathPrefix,
     dir: {
       input: "src",
-      output: "_site/kawaii-sketchbook",
+      output: "_site",
       includes: "layouts",
     },
     markdownTemplateEngine: "njk"  // ← ここを追加！
