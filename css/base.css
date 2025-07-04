@@ -1,0 +1,196 @@
+/* 全体の基本設定 */
+body {
+  font-family: 'Noto Sans JP', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #bbadd4;
+  color: #280017;
+  margin: 0;
+  padding: 0 0px;
+  line-height: 1.6;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ヘッダーのスタイル */
+.title {
+  background-color: #e62954;
+  color: #bbadd4;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.header-sns {
+  background-color:#df91bc;
+  color: #bbadd4;
+  padding: 15px 20px;
+  text-align: right;
+}
+
+/* フッターのスタイル */
+/* 通常のフッター（サイトの一番下） */
+footer {
+  background-color: #c3c3c4;
+  color: #666666;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+/* 上部フッター：*/
+.footer-top {
+  background-color: #df91bc;
+  padding: 3px 20px;
+  font-size: 0.9em;
+  text-align: center;
+  margin-bottom: -40px; /* 下の余白をゼロにする　上下同じ数値に */
+}
+
+/* SNSリンク個別デザイン */
+.footer-link {
+  text-decoration: none;
+  background: #e62954;
+  color: #bbadd4;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: background 0.3s;
+  display: inline-block;
+  margin: 0.25em;
+}
+
+.footer-link:hover {
+  background: #df91bc;
+}
+
+/* リンクの基本スタイル */
+a {
+  color: #7d3790;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #c3c3c4;
+}
+
+
+/* きじ箱 */
+.center-box {
+  background-color: #ffffff;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+/* indexカラム */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+.grid-item {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 0rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+  overflow: hidden;
+}
+
+.grid-item:hover {
+  transform: scale(1.03);
+}
+
+.grid-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: block;
+}
+
+
+/* サムネ関連 */
+
+.thumbnail {
+  width: 150px;        /* 固定の正方形サイズに */
+  height: 150px;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;   /* 画像を枠いっぱいにカバー */
+  display: block;
+  margin: 0;
+  overflow: hidden;    /* 万一はみ出す部分を隠す */
+  vertical-align: middle;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 枠内で画像を切り取る形で収める */
+  display: block;
+}
+
+.sketch-card {
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+
+/* 小さな画面向け */
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+  
+ .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    padding: 0.5rem;
+  }
+
+  .footer-top,
+  footer {
+    padding: 10px;
+    font-size: 0.8em;
+  }
+
+  .footer-link {
+    padding: 0.4em 0.8em;
+    font-size: 0.9em;
+  }
+
+  .center-box {
+    padding: 1rem;
+    margin: 20px auto;
+  }
+}
+
+/*以下、ページ送りのやつ*/
+
+.pagination {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.pagination-button img.pagination-icon {
+  width: 48px;
+  height: auto;
+  vertical-align: middle;
+  margin: 0 0.5em;
+  transition: transform 0.2s ease;
+}
+
+.pagination-button img.pagination-icon:hover {
+  transform: scale(1.1);
+}

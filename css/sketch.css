@@ -1,0 +1,121 @@
+.speech-left, .speech-right {
+  max-width: 60%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+  background-color: #f0f0f0;
+  font-family: sans-serif;
+}
+
+.speech-left {
+  background-color: #e0f7fa;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.speech-left::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  border: 10px solid transparent;
+  border-right-color: #e0f7fa;
+}
+
+.speech-right {
+  background-color: #fff3e0;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.speech-right::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  border: 10px solid transparent;
+  border-left-color: #fff3e0;
+}
+
+/* タイトルの位置 */
+.center-box-title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 2rem; /* ヘッダーとの距離 */
+  margin-bottom: -0.9rem; /* タイトルの下余白をマイナスに */
+  position: relative;
+  z-index: 10; /* ボックスより上に表示 */
+}
+
+.center-box {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  border: 1px solid #000;
+  border-radius: 8px;
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.center-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto; /* 中央寄せと余白 */
+}
+
+
+ /* もどるためのボタン */
+.back-link {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.back-button {
+  text-decoration: none;
+  background: #eee;
+  color: #333;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.back-button:hover {
+  background: #c3c3c4;
+}
+
+/* タグ */
+.post-tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.post-tags a {
+  background-color: #f0f0f0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #555;
+  transition: background-color 0.2s;
+}
+
+.post-tags a:hover {
+  background-color: #dcdcdc;
+}
+
+.post-date {
+  text-align: right;
+  font-size: 0.9em;
+  color:#555;
+  margin: 0;
+  }
+  
+ .sketch-card {
+  margin-top: 0;
+  padding-top: 0;
+}
