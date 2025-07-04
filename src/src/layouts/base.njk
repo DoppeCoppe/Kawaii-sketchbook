@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }}</title>
+   {% include "meta.njk" %}
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/sketch.css">
+</head>
+<body>
+  <header class="title">
+    <h1>Kawaii Sketchbook | HADAKANBONEZUMI</h1>
+     </header>
+  <header class="header-sns">
+  <a href="https://hadakanbonezumi.com/" target="_blank" rel="noopener noreferrer" class="footer-link">My Art website</a>
+	<a href="https://www.instagram.com/hadakanbonezumi/" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a>
+	<a href="https://bsky.app/profile/hadakanbonezumi.bsky.social" target="_blank" rel="noopener noreferrer" class="footer-link">Bluesky</a>
+	<a href="https://ko-fi.com/doppecoppe" target="_blank" rel="noopener noreferrer"  class="footer-link">Ko-fi</a>
+  </header>
+
+<main>
+  {% block content %}
+    {{ content | safe }}
+  {% endblock %}
+</main>
+
+
+
+<!-- フッター1（SNSリンクなど） -->
+<footer class="footer-top">
+ ほぼまいにち。かわいいスケブ。doooodle!!
+</footer>
+
+<!-- フッター2 copy right -->
+<footer class="footer-bottom">  
+    © 2004-2025 hadakanbonezumi (´ɷ` ˘)
+  </footer>
+</body>
+</html>
