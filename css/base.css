@@ -2,6 +2,11 @@
 body {
   font-family: 'Noto Sans JP', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #bbadd4;
+  background-image: url('/images/back.png'); /* 画像パスはご自身のものに */
+  background-repeat: repeat;       /* 縦横に繰り返す */
+  background-position: top left;   /* 左上から開始 */
+  background-size: auto;            /* 元のサイズで表示 */
+  background-attachment: fixed;    /* スクロールしても固定（不要なら外してください） */
   color: #280017;
   margin: 0;
   padding: 0 0px;
