@@ -37,6 +37,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy({ "src/images": "images" });
 　eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
+  eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
+
 
   // firstImage フィルター
   eleventyConfig.addFilter("firstImage", function(content) {
