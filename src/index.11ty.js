@@ -10,7 +10,7 @@ module.exports = class {
         pagination.pageNumber === 0 ? "/" : `/page/${pagination.pageNumber + 1}/`,
       layout: "base.njk",
       eleventyExcludeFromCollections: true,
-      title: "Kawaii Sketchbook || HADAKANBONEZUMI"
+      title: "Kawaii Sketchbook :B"
     };
   }
 
